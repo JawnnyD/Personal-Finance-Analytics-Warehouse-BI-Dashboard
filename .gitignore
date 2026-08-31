@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+
+.env
+.env.*
+!.env.example
+
+data/raw/*
+!data/raw/README.md
+
+*.pbix
+*.tmp
+.pytest_cache/
+.ruff_cache/
