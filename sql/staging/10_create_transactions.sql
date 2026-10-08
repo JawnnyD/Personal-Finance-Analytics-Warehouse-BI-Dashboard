@@ -1,4 +1,9 @@
 -- rebuild derived sraging table from current raw snapshot
+DROP VIEW IF EXISTS quality.data_quality_check_summary;
+DROP VIEW IF EXISTS quality.transaction_issues;
+DROP VIEW IF EXISTS quality.unmapped_merchants;
+DROP VIEW IF EXISTS quality.suspicious_duplicate_transaction_groups;
+
 DROP TABLE IF EXISTS staging.transactions;
 
 CREATE TABLE staging.transactions AS

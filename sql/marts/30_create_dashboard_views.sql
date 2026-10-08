@@ -4,6 +4,7 @@ SELECT date_trunc('month', dd.full_date)::date AS transaction_month
      , dd.calendar_year
      , dd.month_number
      , dd.month_name
+     , ft.paid_by
      , COUNT(ft.transaction_id) AS transaction_count
      , SUM(ft.absolute_amount) AS total_expense
      , AVG(ft.absolute_amount) AS average_transaction_amount
@@ -12,7 +13,7 @@ SELECT date_trunc('month', dd.full_date)::date AS transaction_month
        ON ft.date_key = dd.date_key
  WHERE ft.is_expense
  -- group all transactions into monthly buckets
- GROUP BY date_trunc('month', dd.full_date)::date, dd.calendar_year, dd.month_number, dd.month_name;
+ GROUP BY date_trunc('month', dd.full_date)::date, dd.calendar_year, dd.month_number, dd.month_name, ft.paid_by;
 
 -- summarizes expenses by category
 CREATE OR REPLACE VIEW marts.category_spending_summary AS
