@@ -1,7 +1,7 @@
 -- delete existing marts tables and dashboard views to rebuild from V2 staging data
 DROP VIEW IF EXISTS marts.monthly_expense_summary;
-DROP VIEW IF EXISTS marts.monthly_income_expense;
 DROP VIEW IF EXISTS marts.monthly_savings_rate;
+DROP VIEW IF EXISTS marts.monthly_income_expense;
 DROP VIEW IF EXISTS marts.category_spending_summary;
 DROP VIEW IF EXISTS marts.budget_vs_actual;
 DROP VIEW IF EXISTS marts.top_merchants;
@@ -73,6 +73,10 @@ SELECT to_char(
          d.calendar_date,
          'FMDay'
        ) AS day_name
+     , to_char(
+         d.calendar_date,
+         'FMMon'
+       ) AS month_short_name
 
   FROM date_range AS dr
   -- generates one row for every day between first and last transaction date
