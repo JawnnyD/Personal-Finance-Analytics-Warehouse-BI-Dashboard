@@ -168,6 +168,8 @@ VALUES ('Housing', 'Rent', 'Needs', TRUE)
      , ('Income', 'Freelance', 'Income', NULL)
      , ('Income', 'Interest', 'Income', NULL)
      , ('Income', 'Other Income', 'Income', NULL)
+
+     , ('Debt Repayment', 'Student Loan Payment', 'Needs', TRUE)
    
      , ('Other', 'Miscellaneous', 'Unclassified', NULL)
      , ('Other', 'To Review', 'Unclassified', NULL)
