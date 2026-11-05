@@ -13,13 +13,25 @@ Add public screenshots here when they are ready. Store them in:
 dashboard/assets/screenshots/
 
 Suggested filenames:
-- 01-executive-summary.png
-- 02-spending-analysis.png
+- 01-overview.png
+- 02-monthly-statistics.png
 - 03-star-schema.png
 - 04-data-quality-checks.png
 
 Use descriptive alt text with each image. Do not include private personal data.
 -->
+
+## Dashboard Status
+
+The Power BI report is being developed iteratively. Its current page layout is:
+
+| Page | Status | Focus |
+| --- | --- | --- |
+| Overview | In progress | High-level financial KPIs and summary insights |
+| Monthly Statistics | In progress | Monthly income, expense, savings, and spending trends |
+| Additional pages | Planned | Future analysis pages will be added or revised as the dashboard evolves |
+
+The remaining page layout is intentionally flexible while the reporting experience is refined.
 
 ## Business Problem
 
